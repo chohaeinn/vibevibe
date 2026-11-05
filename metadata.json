@@ -1,0 +1,8 @@
+{
+  "name": "Event ON",
+  "description": "AI 기반 행사 기획, 3D 공간 배치, 운영 분석 및 보고서 작성을 위한 통합 워크스페이스.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    font-family: "Plus Jakarta Sans", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  .font-mono {
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Clean A4 PDF Print Stylesheet for XAI Comprehensive Report */
+@media print {
+  body {
+    background: #ffffff !important;
+    overflow: visible !important;
+    height: auto !important;
+  }
+
+  #root,
+  .print-container {
+    height: auto !important;
+    overflow: visible !important;
+    display: block !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-page-break {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+/* Event ON landing page — full-bleed editorial hero and feature gallery */
+.eventon-hero {
+  min-height: 620px;
+  height: min(100svh, 700px);
+  background: #17242b;
+}
+
+.eventon-hero-photo {
+  background-image: url('/images/hero-planning.jpg');
+  background-size: cover;
+  background-position: center 47%;
+  transform: scale(1.015);
+}
+
+.eventon-hero-shade {
+  background: linear-gradient(90deg,
+    rgba(9, 17, 23, 0.80) 0%,
+    rgba(11, 20, 27, 0.67) 31%,
+    rgba(13, 23, 30, 0.28) 66%,
+    rgba(13, 23, 30, 0.13) 100%);
+}
+
+@media (max-width: 640px) {
+  .eventon-hero {
+    min-height: 590px;
+    height: 82svh;
+  }
+
+  .eventon-hero-photo {
+    background-position: 61% center;
+  }
+
+  .eventon-hero-shade {
+    background: linear-gradient(90deg,
+      rgba(9, 17, 23, 0.82) 0%,
+      rgba(11, 20, 27, 0.64) 58%,
+      rgba(13, 23, 30, 0.34) 100%);
+  }
+}
+
+.eventon-landing button {
+  -webkit-tap-highlight-color: transparent;
+}
